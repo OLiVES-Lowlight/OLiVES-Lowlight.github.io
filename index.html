@@ -16,10 +16,14 @@
   <style>
     body { font-family: 'Noto Sans', sans-serif; }
     .publication-title, .title, .subtitle, h1, h2, h3 { font-family: 'Google Sans', 'Noto Sans', sans-serif; }
-    .publication-title { font-weight: 700; }
+    .publication-title { font-weight: 700; margin-top: 4rem; }
     .hero.is-light { background-color: #ffffff; }
-    .author-block { margin-right: 0.5rem; }
-    .publication-links { margin-top: 1rem; }
+    .author-block { font-weight: 500; margin-right: 0.5rem; }
+    .publication-authors a,
+    .publication-authors a:link,
+    .publication-authors a:visited { color: #1e6bb8 !important; }
+    .publication-authors a:hover { color: #0d4f8b !important; text-decoration: underline; }
+    .publication-links { margin-top: 2rem; }
     .publication-links .link-block { margin: 0.25rem; display: inline-block; }
     .publication-links .button { padding-left: 1.25rem; padding-right: 1.25rem; }
     .stat-card { text-align: center; padding: 1.25rem 0.5rem; border-radius: 8px; background-color: #fafafa; }
@@ -39,19 +43,23 @@
     <div class="container is-max-desktop has-text-centered">
       <h1 class="title is-2 publication-title">OLiVES: An Outdoor Low-Light Video Benchmark<br>for Enhancement and Segmentation</h1>
 
-      <div class="is-size-5 publication-authors">
-        <span class="author-block">Anonymous Authors</span>
-        <!-- TODO: replace with author list, e.g.
-        <span class="author-block"><a href="#">Author One</a><sup>1</sup>,</span>
-        <span class="author-block"><a href="#">Author Two</a><sup>1,2</sup>,</span>
-        <span class="author-block"><a href="#">Author Three</a><sup>2</sup></span>
-        -->
+      <div class="is-size-4 publication-authors" style="margin-top: 2rem;">
+        <!-- <span class="author-block">Anonymous Authors</span>
+        TODO: replace with author list, e.g.-->
+        <span class="author-block"><a href="https://research-information.bris.ac.uk/en/persons/yini-li/" target="blank">Yini Li</a><sup>1*</sup>,</span>
+        <span class="author-block"><a href="https://joannelin168.github.io/" target="blank">Joanne Lin</a><sup>1*</sup>,</span>
+        <span class="author-block"><a href="#">Dave Blackham</a><sup>2</sup>,</span>
+        <span class="author-block"><a href="https://david-bull.github.io/" target="blank">David Bull</a><sup>1</sup>,</span> 
+        <span class="author-block"><a href="https://pui-nantheera.github.io/" target="blank">Nantheera Anantrasirichai</a><sup>1</sup></span>
       </div>
 
-      <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
-        <!-- TODO: replace with author list, e.g.
-        <span class="author-block">Submitted to NeurIPS 2026 &mdash; Datasets and Benchmarks Track</span>
-        -->
+      <div class="is-size-5 publication-authors" style="margin-top: 1rem;">
+        <span class="author-block" style="font-weight: 100;"><sup>1</sup>University of Bristol</span>
+        <!-- TODO: add affiliation 2, e.g. <span class="author-block"><sup>2</sup>Affiliation Two</span> -->
+      </div>
+
+      <div class="is-size-6 publication-authors" style="margin-top: 0.5rem; color: #6b6b6b;">
+        <span><sup>*</sup>Equal contribution</span>
       </div>
 
       <div class="publication-links">
