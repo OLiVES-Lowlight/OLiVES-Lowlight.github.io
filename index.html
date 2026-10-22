@@ -50,45 +50,46 @@
       <h1 class="title is-2 publication-title">OLiVES: An Outdoor Low-Light Video Benchmark<br>for Enhancement and Segmentation</h1>
 
       <div class="is-size-4 publication-authors" style="margin-top: 2rem;">
-        <span class="author-block">Anonymous Authors</span>
-        <!-- TODO: replace with author list, e.g.
-        <span class="author-block"><a href="https://research-information.bris.ac.uk/en/persons/yini-li/" target="blank">Yini Li</a><sup>1*</sup>,</span>
-        <span class="author-block"><a href="https://joannelin168.github.io/" target="blank">Joanne Lin</a><sup>1*</sup>,</span>
-        <span class="author-block"><a href="#">Dave Blackham</a><sup>2</sup>,</span>
-        <span class="author-block"><a href="https://david-bull.github.io/" target="blank">David Bull</a><sup>1</sup>,</span> 
-        <span class="author-block"><a href="https://pui-nantheera.github.io/" target="blank">Nantheera Anantrasirichai</a><sup>1</sup></span>
-        -->
+        <span class="author-block"><a href="https://research-information.bris.ac.uk/en/persons/yini-li/" target="_blank" rel="noopener">Yini Li</a>*, <a href="https://research-information.bris.ac.uk/en/persons/joanne-lin/" target="_blank" rel="noopener">Joanne Lin</a>*, David Blackham, David Bull, <a href="https://pui-nantheera.github.io/" target="_blank" rel="noopener">Nantheera Anantrasirichai</a></span>
       </div>
 
       <div class="is-size-5 publication-authors" style="margin-top: 1rem;">
-        <!-- <span class="author-block" style="font-weight: 100;"><sup>1</sup>University of Bristol, <sup>2</sup>MyWorld</span>
-        TODO: add affiliation 2, e.g. <span class="author-block"><sup>2</sup>Affiliation Two</span> -->
+        <span class="author-block">University of Bristol</span>
+      </div>
+
+      <div class="is-size-6 publication-authors" style="margin-top: 0.25rem;">
+        <span class="author-block">*Equal contribution</span>
       </div>
 
       <div class="is-size-6 publication-authors" style="margin-top: 0.5rem; ">
-        <!-- <span><sup>*</sup>Equal contribution</span> -->
       </div>
 
       <div class="publication-links">
-        <!-- TODO: paste arXiv URL into href -->
         <span class="link-block">
-          <a href="#" class="button is-dark is-rounded">
+          <a href="https://arxiv.org/pdf/2610.20501" class="button is-dark is-rounded">
             <span class="icon"><i class="ai ai-arxiv"></i></span>
             <span>arXiv</span>
           </a>
         </span>
         <!-- TODO: paste GitHub repo URL into href -->
         <span class="link-block">
-          <a href="#" class="button is-dark is-rounded">
+          <a href="https://github.com/anonymous-OLiVES/RoMa_Finetune4OLiVES" target="blank" class="button is-dark is-rounded">
             <span class="icon"><i class="fab fa-github"></i></span>
             <span>Code</span>
           </a>
         </span>
         <!-- TODO: paste dataset download URL into href -->
         <span class="link-block">
-          <a href="#" class="button is-dark is-rounded">
+          <a href="https://huggingface.co/datasets/Anonymous-OLiVES/OLiVES" target="blank" class="button is-dark is-rounded">
             <span class="icon"><i class="fas fa-database"></i></span>
             <span>Dataset</span>
+          </a>
+        </span>
+        <!-- TODO: paste dataset download URL into href -->
+        <span class="link-block">
+          <a href="https://huggingface.co/datasets/Anonymous-OLiVES/OLiVES-sample" target="blank" class="button is-dark is-rounded">
+            <span class="icon"><i class="fas fa-database"></i></span>
+            <span>Dataset samples</span>
           </a>
         </span>
       </div>
@@ -287,8 +288,13 @@
       <strong>S</strong>: Supervised, <strong>US</strong>: Unsupervised, <strong>UP</strong>: Unpaired. <strong>I</strong>: Image, <strong>V</strong>: Video. <strong>WE</strong>: Warp Error.
     </p>
     </div>
+    <p class="has-text-centered is-size-5" style="margin-top: 1rem; color: #6b6b6b;">
+      <strong>Qualitative results of LLVE methods trained on OLiVES</strong> </p>
+    <p style="margin-top: 1rem;">
+    <img src="images/LLVE_qualitative.jpg" style="width:100%;; display:block; margin:auto;">
+    </p>
 
-    <h3 class="title is-5" style="margin-top: 2rem;">Video Object Segmentation</h3>
+    <h3 class="title is-5" style="margin-top: 3rem;">Video Object Segmentation</h3>
     <div class="content has-text-justified">
       <p>
         We benchmark recent semi-supervised VOS methods including <strong>STCN</strong>, <strong>AOT</strong>, <strong>De-AOT</strong>, <strong>XMem</strong>, and <strong>Cutie</strong>, evaluated with the standard <strong>J</strong>, <strong>F</strong>, and <strong>J&amp;F</strong> metrics. Each model is finetuned on our train set for 30,000 iterations with batch size 8 and learning rate 1&times;10<sup>&minus;4</sup>, starting from the off-the-shelf weights trained on DAVIS&nbsp;2017 and YouTube-VOS. We also evaluate on the LLE-VOS validation set to demonstrate the generalisation of our training data across low-light benchmarks.
@@ -328,12 +334,24 @@
       </table>
     </div>
     </div>
-  </div>
-</section>
+    <p class="has-text-centered is-size-5" style="margin-top: 1rem; color: #6b6b6b;">
+      <strong>Qualitative comparison of Cutie on an example video from MOSEv2 </strong> </p>
+      <p class="has-text-centered is-size-6" style="margin-bottom: 1rem; color: #6b6b6b;"> (Left) the first frame with the input masks. (Right) Crops of segmentation outputs for Cutie with various training data. </p>
+    <p style="margin-top: 1rem;">
+    <img src="images/mosev2-val-lowlight-comparison.jpg" style="width:100%;; display:block; margin:auto;">
+    </p>
 
-<section class="section">
+    <p class="has-text-centered is-size-5" style="margin-top: 2rem; color: #6b6b6b;">
+      <strong>Out-of-distribution evaluation on a real-world low-light video</strong> </p>
+      <p class="has-text-centered is-size-6" style="margin-bottom: 1rem; color: #6b6b6b;"> The first column shows the original low-light video (top) and the corresponding enhanced video produced by a model trained on OLiVES (bottom). The second and third columns show the VOS results produced by two pretrained models (top row) and the corresponding models fine-tuned on OLiVES (bottom row). All VOS models are applied directly to the original low-light video. </p>
+    <p style="margin-top: 1rem;">
+    <video src="images/trasier_tagged_h264.mp4" style="width:100%; display:block; margin:auto;" autoplay loop muted playsinline controls></video>
+    Credit: Tarsier by Humble Bee Films
+    </p>
+  </div>
+
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Two-Stage Pipeline: LLVE&nbsp;+&nbsp;VOS</h2>
+    <h3 class="title is-5" style="margin-top: 3rem;">Two-Stage Pipeline: LLVE&nbsp;+&nbsp;VOS</h3>
     <div class="content has-text-justified">
       <p>
         We further evaluate the VOS performance of LLVE methods trained on OLiVES within a <strong>two-stage pipeline</strong>, where enhancement is applied as a pre-processing step before inference with a pre-trained VOS model. We use <strong>Cutie</strong> with off-the-shelf weights for segmentation after enhancement. Evaluation on the LLE-VOS validation set assesses the effectiveness of our training data for LLVE: every LLVE model trained on OLiVES yields a clear improvement over the Cutie-only baseline, demonstrating that OLiVES enhancement transfers across datasets.
@@ -371,13 +389,25 @@
 
 <section class="section" style="background-color: #fafafa;">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Motion Blur Examples</h2>
+    <p style="margin-top: 1rem;">
+    <img src="images/motionblur.jpg" alt="Motion blur examples: meerkat running (left) and gelada jumping down (right)" style="width:100%; display:block; margin:auto;">
+    </p>
+    <p class="has-text-centered is-size-5" style="margin-top: 1rem; color: #6b6b6b;">
+      Our dataset contains motion blur caused by rapid animal movement. Examples include a running meerkat (left) and a gelada jumping down (right).
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <!-- TODO: replace with the final citation once accepted -->
-    <pre class="bibtex">@inproceedings{olives2026,
-  title     = {OLiVES: An Outdoor Low-Light Video Benchmark for Enhancement and Segmentation},
-  author    = {Anonymous},
-  booktitle = {Anonymous},
-  year      = {2026}
+    <pre class="bibtex">@article{olives2026,
+  title   = {OLiVES: An Outdoor Low-Light Video Benchmark for Enhancement and Segmentation},
+  author  = {Li, Yini and Lin, Joanne and Blackham, David and Bull, David and Anantrasirichai, Nantheera},
+  journal = {arXiv preprint arXiv:2610.20501},
+  year    = {2026}
 }</pre>
   </div>
 </section>
